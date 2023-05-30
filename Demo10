@@ -23,3 +23,12 @@ public int getHeight(TreeNode root) {
     return Math.min(left,right) +1;
     
 }    
+
+balanced binary tree
+public boolean isBalance(TreeNoderoot){
+        if(root == null ) return true;
+        int leftHeight = getHeight(root.left);
+        int rightHeight = getHeight(root.right);
+        
+        return Math.abs(leftHeight-rightHeight) < = 1 && isBalance(root.left) && isBalance(riit.right);
+        }
