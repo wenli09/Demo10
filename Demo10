@@ -30,5 +30,5 @@ public boolean isBalance(TreeNoderoot){
         int leftHeight = getHeight(root.left);
         int rightHeight = getHeight(root.right);
         
-        return Math.abs(leftHeight-rightHeight) < = 1 && isBalance(root.left) && isBalance(riit.right);
+        return Math.abs(leftHeight-rightHeight) < = 1 && isBalance(root.left) && isBalance(root.right);
         }
