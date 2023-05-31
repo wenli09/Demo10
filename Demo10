@@ -29,6 +29,19 @@ public boolean isBalance(TreeNoderoot){
         if(root == null ) return true;
         int leftHeight = getHeight(root.left);
         int rightHeight = getHeight(root.right);
-        
+      
         return Math.abs(leftHeight-rightHeight) < = 1 && isBalance(root.left) && isBalance(root.right);
         }
+        
+  
+public TreeNode invertTree(TreeNode root) {
+        if(root == null) return root;
+        TreeNode leftNode = inverTree(root.left);
+        TreeNode rightNode = invertTree(root.right);
+        
+        root.left = rightNode;
+        root.right = leftNode;
+        
+        return root;
+        
+}
